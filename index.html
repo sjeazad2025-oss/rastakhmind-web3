@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>RastakhMind Web3 Gateway</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #080b14;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .gateway {
+      width: min(90%, 500px);
+      padding: 30px;
+      border: 1px solid #24324d;
+      border-radius: 20px;
+      text-align: center;
+      background: #101827;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .status {
+      color: #7ee787;
+      margin: 20px 0;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #walletAddress {
+      margin-top: 20px;
+      word-break: break-all;
+      color: #8ab4f8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="gateway">
+    <h1>🌐 RastakhMind</h1>
+
+    <h2>Web3 Gateway</h2>
+
+    <p class="status">
+      ● SYSTEM STATUS: INITIALIZING
+    </p>
+
+    <button id="connectButton">
+      Connect Wallet
+    </button>
+
+    <div id="walletAddress"></div>
+  </main>
+
+  <script>
+    const button = document.getElementById("connectButton");
+    const walletAddress = document.getElementById("walletAddress");
+
+    button.addEventListener("click", async () => {
+      walletAddress.textContent =
+        "Wallet Gateway ready. Connection module will be added next.";
+    });
+  </script>
+
+</body>
+</html>
